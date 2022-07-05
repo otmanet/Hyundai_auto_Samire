@@ -36,7 +36,7 @@
     <!-- Modernizr JS -->
     <script src="js/modernizr-2.6.2.min.js"></script>
 
-
+    <link href="https://vjs.zencdn.net/7.19.2/video-js.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -104,11 +104,17 @@
                 </div>
             </div>
             <center>
-                <video width="1200px" controls playsinline autoplay loop muted>
-                    <source src="video/tucson.mp4"  type="video/mp4">
-                    <source src="video/tucson.mp4" type="video/ogg">
-                  Your browser does not support the video tag.
-                  </video>
+                <video id="my-video" class="video-js" controls preload="auto" width="1000" poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+                <source src="video/tucson.mp4" type="video/mp4" />
+                <source src="video/tucson.mp4" type="video/webm" />
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider upgrading to a
+                  web browser that
+                  <a href="https://videojs.com/html5-video-support/" target="_blank"
+                    >supports HTML5 video</a
+                  >
+                </p>
+              </video>
             </center>
         </div>
 
@@ -376,6 +382,7 @@
     <script src="js/jquery.flexslider-min.js"></script>
     <!-- Main -->
     <script src="js/main.js"></script>
+    <script src="https://vjs.zencdn.net/7.19.2/video.min.js"></script>
 
 </body>
 
